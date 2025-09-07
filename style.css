@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#page1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#wrapper {
+  height: 94vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 10px;
+}
+nav {
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12px;
+  background-color: rgb(196, 182, 182) ;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+#navleft {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  align-content: center;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+  grid-auto-rows: 23px;
+  gap: 12px;
+}
+#navleft > a {
+  display: flex;
+  letter-spacing: 1px;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+#navright {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+  align-content: center;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+  grid-auto-rows: 23px;
+  gap: 12px;
+}
+#navright > a {
+  display: flex;
+  letter-spacing: 1px;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+#navleft,
+#navright,
+a {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.795); /* or whatever color you want */
+}
+
+#container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  z-index: -1;
+  transform-style: preserve-3d;
+}
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.background {
+  transform: translateZ(-50px) scale(7);
+}
+
+.foreground {
+  bottom: -57%;
+  transform: translateZ(-29px) scale(2.5);
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1; /* Bring it in front of background */
+}
+
+section {
+  background-color: rgb(45, 45, 45);
+  color: white;
+  padding: 5rem 0;
+}
+.bg1 {
+  background-image: url(https://images.unsplash.com/photo-1751013781844-fa6a78089e49?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.bg2 {
+  background-image: url(jonny-kennaugh-nPOtzvGLYW0-unsplash.jpg);
+}
+.bg3 {
+  background-image: url(https://images.unsplash.com/photo-1683009427590-dd987135e66c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.first {
+  margin-top: 12px;
+  font-size: 3rem;
+  
+}
+.textco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin: 5rem 0;
+  padding: 0 15rem;
+}
+.bg {
+  position: relative;
+  width: 100%;
+  background-attachment: fixed;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+}
+.desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 42px;
+}
